@@ -27,6 +27,22 @@ function loadJSON(){
 
         // My Entire JSON Object from data.json
         console.log(jsonObj);
+        var feedWrapper = document.getElementById('article-feed');
+        for (var i = 0, ii = jsonObj.length; i < ii; i++)
+        {
+          var current = jsonObj[i];
+          var newArticle = document.createElement("div");
+          newArticle.className = "l_grid_cell-sm-3 article";
+          var newHTML = '<img class = "m_image" src = "' + current.imageUrl + '">';
+          newHTML +=    '<div class = "m_text">';
+          newHTML +=    '<a href = "' + current.url + '"><h2>' + current.title + '</h2></a>';
+          newHTML +=    '<p>' + current.caption+ '<br></p>';
+          newHTML +=    '<h4>Credited to: ' + current.credits + '</h4></div>';
+
+           newArticle.innerHTML = newHTML;
+           feedWrapper.appendChild(newArticle);
+        }
+        
 
       }
 

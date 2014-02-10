@@ -1,0 +1,6 @@
+.article .m_image {
+  float: left;
+  width: 50%; }
+.article .m_text {
+  float: right;
+  width: 50%; }

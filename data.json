@@ -12,5 +12,19 @@
 	    "url" : "http://google.com",
 	   	"imageUrl" : "img/1388344538s2wq5.jpg",
 	    "credits": "You might of guessed it, I did it as well."
+	},
+	{
+	    "title" : "Cool beans", 
+	    "caption"   : "They're ultra coolio",
+	    "url" : "http://www.urbandictionary.com/define.php?term=cool+beans",
+	   	"imageUrl" : "http://fc01.deviantart.net/fs71/f/2010/225/d/6/d619e3c2952a6b27c8b98a5f3982b146.jpg",
+	    "credits": "Zephyr Tees"
+	},
+	{
+	    "title" : "Dat suqare", 
+	    "caption"   : "So big!",
+	    "url" : "http://google.com",
+	   	"imageUrl" : "http://placehold.it/600x600",
+	    "credits": "From a placehodit.."
 	}
 ]
