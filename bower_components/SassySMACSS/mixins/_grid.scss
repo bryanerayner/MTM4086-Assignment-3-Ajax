@@ -1,0 +1,109 @@
+@import "mediaQueries";
+
+$defaults-grid_cell-cellClassName: l_grid_cell !default;
+$defaults-grid_cell-columnClassName: l_grid_container !default;
+
+$defaults-float: left !default;
+$defaults-float-opposite: right !default;
+
+// This mixin generates a cell, based on a column and contianer, in a SMACSS way. 
+// If $useColumnNumber is set to true, this mixin will generate a number as well
+// as the column name.
+//
+@mixin grid_cell($cellWidth, $columnWidth, $useColumnNumber:false, $cellClassName:$defaults-grid_cell-cellClassName, $columnClassName:$defaults-grid_cell-columnClassName, $useFloat:false)
+{
+	$numberPrefix:"";
+	@if $useColumnNumber == true
+	{
+		$numberPrefix:-#{$columnWidth};
+	}
+
+	.#{$columnClassName}#{$numberPrefix}
+	{
+		> .#{$cellClassName}-#{$cellWidth}
+		{
+			@if ($useFloat)
+			{
+				float: $defaults-float;	
+			}
+			width: percentage($cellWidth/$columnWidth);
+		}
+	}
+
+
+}
+
+// Desugars to grid_cell, only appending a $modeName to the end of the name.
+// $cellWidth: The width of the cell
+// $columnWidth: The width of the column
+// $modeName: The name to prefix onto grid_cell
+// $cellClassName: The class name for each grid_cell
+// $columnClassName: The class name for each grid_column
+@mixin grid_cell-mode($cellWidth, $columnWidth, $modeName, $useColumnNumber:false, $cellClassName:$defaults-grid_cell-cellClassName, $columnClassName:$defaults-grid_cell-columnClassName)
+{
+	@include grid_cell($cellWidth, $columnWidth, $useColumnNumber, #{$cellClassName}-#{$modeName}, $columnClassName);
+}
+
+@mixin grid_cell-sm($cellWidth, $columnWidth, $useColumnNumber:false, $cellClassName:$defaults-grid_cell-cellClassName, $columnClassName:$defaults-grid_cell-columnClassName)
+{
+	@include grid_cell($cellWidth, $columnWidth, sm, $useColumnNumber, $cellClassName, $columnClassName);
+}
+
+@mixin grid_cell-med($cellWidth, $columnWidth, $useColumnNumber:false, $cellClassName:$defaults-grid_cell-cellClassName, $columnClassName:$defaults-grid_cell-columnClassName)
+{
+	@include grid_cell($cellWidth, $columnWidth, med, $useColumnNumber, $cellClassName, $columnClassName);
+}
+
+@mixin grid_cell-lg($cellWidth, $columnWidth, $useColumnNumber:false, $cellClassName:$defaults-grid_cell-cellClassName, $columnClassName:$defaults-grid_cell-columnClassName)
+{
+	@include grid_cell($cellWidth, $columnWidth, lg, $useColumnNumber, $cellClassName, $columnClassName);
+}
+
+
+
+
+@mixin create_grid($columnWidth:12, $useColumnNumber:false, $mediaQueries:("sm","med","lg"), $cellClassName:$defaults-grid_cell-cellClassName, $columnClassName:$defaults-grid_cell-columnClassName)
+{
+	@for $i from 1 through $columnWidth
+	{
+		@each $mediaQuery in $mediaQueries
+		{
+			// Check of the media query exists, and it's not small. By default, "sm" media queries 
+			@if (get_mediaQuery($mediaQuery) and $mediaQuery != "sm")
+			{
+				@media(max-width:get_mediaQuery($mediaQuery))
+				{
+					@include grid_cell-mode($i, $columnWidth, $mediaQuery, $useColumnNumber, $cellClassName, $columnClassName);	
+				}				
+			}
+			@else
+			{
+				@include grid_cell-mode($i, $columnWidth, $mediaQuery,$useColumnNumber, $cellClassName, $columnClassName);
+			}
+			
+		}
+	}
+	$numberPrefix:"";
+	@if $useColumnNumber == true
+	{
+		$numberPrefix:-#{$columnWidth};
+	}
+	
+	.#{$columnClassName}#{$numberPrefix}
+	{
+		width:100%;
+
+		> [class*=#{$cellClassName}]
+		{
+			float: $defaults-float;
+		}
+		> [class*=#{$cellClassName}]:last-child
+		{
+			float: $defaults-float-opposite;
+		}
+		> .#{$cellClassName}-last
+		{
+			float: $defaults-float;
+		}		
+	}
+}

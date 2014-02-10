@@ -1,0 +1,7 @@
+{
+	"name":"MTM4086 Assignment 3",
+	"dependencies":
+	{
+		"SassySMACSS":">0.0.0"
+	}
+}
