@@ -1,70 +1,179 @@
-/*
-Syntax error: Invalid CSS after "": expected selector, was ""
-        on line 23 of scss/modules/article.scss
-        from line 4 of scss/styles.scss
+.l_constrained:before, .l_title:before, .l_colourblock:before,
+.l_constrained:after,
+.l_title:after,
+.l_colourblock:after {
+  content: "";
+  display: table; }
 
-Backtrace:
-scss/modules/article.scss:23
-scss/styles.scss:4
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/scss/parser.rb:1147:in `expected'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/scss/parser.rb:1085:in `expected'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/scss/parser.rb:1067:in `expr!'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/scss/static_parser.rb:20:in `parse_selector'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:314:in `visit_rule'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:37:in `visit'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:100:in `visit'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:53:in `map'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:320:in `visit_rule'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:37:in `visit'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:100:in `visit'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:53:in `map'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:320:in `visit_rule'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:37:in `visit'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:100:in `visit'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:227:in `block in visit_import'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:227:in `map'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:227:in `visit_import'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:37:in `visit'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:100:in `visit'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:53:in `map'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:128:in `visit_root'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:37:in `visit'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:100:in `visit'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:7:in `visit'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/root_node.rb:20:in `render'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/engine.rb:315:in `_render'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/engine.rb:262:in `render'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/plugin/compiler.rb:362:in `update_stylesheet'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/plugin/compiler.rb:203:in `block in update_stylesheets'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/plugin/compiler.rb:201:in `each'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/plugin/compiler.rb:201:in `update_stylesheets'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/plugin/compiler.rb:283:in `block in watch'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/vendor/listen/lib/listen/multi_listener.rb:108:in `call'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/vendor/listen/lib/listen/multi_listener.rb:108:in `on_change'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/vendor/listen/lib/listen/multi_listener.rb:117:in `block in initialize_adapter'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/vendor/listen/lib/listen/adapters/polling.rb:56:in `call'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/vendor/listen/lib/listen/adapters/polling.rb:56:in `poll'
-C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.2.14/vendor/listen/lib/listen/adapters/polling.rb:32:in `block in start'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: Invalid CSS after \"\": expected selector, was \"\"\A         on line 23 of scss/modules/article.scss\A         from line 4 of scss/styles.scss"; }
+.l_constrained:after, .l_title:after, .l_colourblock:after {
+  clear: both; }
+
+.l_constrained, .l_title, .l_colourblock {
+  zoom: 1;
+  /* For IE 6/7 (trigger hasLayout) */ }
+
+.l_left {
+  float: left; }
+
+.l_right {
+  float: right; }
+
+.l_constrained {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto; }
+  .l_constrained.l_constrained-wider {
+    max-width: 1200px; }
+
+.l_grid_container > .l_grid_cell-sm-1 {
+  width: 8.33333%; }
+
+@media (max-width: 720px) {
+  .l_grid_container > .l_grid_cell-med-1 {
+    width: 8.33333%; } }
+@media (max-width: 1024px) {
+  .l_grid_container > .l_grid_cell-lg-1 {
+    width: 8.33333%; } }
+.l_grid_container > .l_grid_cell-sm-2 {
+  width: 16.66667%; }
+
+@media (max-width: 720px) {
+  .l_grid_container > .l_grid_cell-med-2 {
+    width: 16.66667%; } }
+@media (max-width: 1024px) {
+  .l_grid_container > .l_grid_cell-lg-2 {
+    width: 16.66667%; } }
+.l_grid_container > .l_grid_cell-sm-3 {
+  width: 25%; }
+
+@media (max-width: 720px) {
+  .l_grid_container > .l_grid_cell-med-3 {
+    width: 25%; } }
+@media (max-width: 1024px) {
+  .l_grid_container > .l_grid_cell-lg-3 {
+    width: 25%; } }
+.l_grid_container > .l_grid_cell-sm-4 {
+  width: 33.33333%; }
+
+@media (max-width: 720px) {
+  .l_grid_container > .l_grid_cell-med-4 {
+    width: 33.33333%; } }
+@media (max-width: 1024px) {
+  .l_grid_container > .l_grid_cell-lg-4 {
+    width: 33.33333%; } }
+.l_grid_container > .l_grid_cell-sm-5 {
+  width: 41.66667%; }
+
+@media (max-width: 720px) {
+  .l_grid_container > .l_grid_cell-med-5 {
+    width: 41.66667%; } }
+@media (max-width: 1024px) {
+  .l_grid_container > .l_grid_cell-lg-5 {
+    width: 41.66667%; } }
+.l_grid_container > .l_grid_cell-sm-6 {
+  width: 50%; }
+
+@media (max-width: 720px) {
+  .l_grid_container > .l_grid_cell-med-6 {
+    width: 50%; } }
+@media (max-width: 1024px) {
+  .l_grid_container > .l_grid_cell-lg-6 {
+    width: 50%; } }
+.l_grid_container > .l_grid_cell-sm-7 {
+  width: 58.33333%; }
+
+@media (max-width: 720px) {
+  .l_grid_container > .l_grid_cell-med-7 {
+    width: 58.33333%; } }
+@media (max-width: 1024px) {
+  .l_grid_container > .l_grid_cell-lg-7 {
+    width: 58.33333%; } }
+.l_grid_container > .l_grid_cell-sm-8 {
+  width: 66.66667%; }
+
+@media (max-width: 720px) {
+  .l_grid_container > .l_grid_cell-med-8 {
+    width: 66.66667%; } }
+@media (max-width: 1024px) {
+  .l_grid_container > .l_grid_cell-lg-8 {
+    width: 66.66667%; } }
+.l_grid_container > .l_grid_cell-sm-9 {
+  width: 75%; }
+
+@media (max-width: 720px) {
+  .l_grid_container > .l_grid_cell-med-9 {
+    width: 75%; } }
+@media (max-width: 1024px) {
+  .l_grid_container > .l_grid_cell-lg-9 {
+    width: 75%; } }
+.l_grid_container > .l_grid_cell-sm-10 {
+  width: 83.33333%; }
+
+@media (max-width: 720px) {
+  .l_grid_container > .l_grid_cell-med-10 {
+    width: 83.33333%; } }
+@media (max-width: 1024px) {
+  .l_grid_container > .l_grid_cell-lg-10 {
+    width: 83.33333%; } }
+.l_grid_container > .l_grid_cell-sm-11 {
+  width: 91.66667%; }
+
+@media (max-width: 720px) {
+  .l_grid_container > .l_grid_cell-med-11 {
+    width: 91.66667%; } }
+@media (max-width: 1024px) {
+  .l_grid_container > .l_grid_cell-lg-11 {
+    width: 91.66667%; } }
+.l_grid_container > .l_grid_cell-sm-12 {
+  width: 100%; }
+
+@media (max-width: 720px) {
+  .l_grid_container > .l_grid_cell-med-12 {
+    width: 100%; } }
+@media (max-width: 1024px) {
+  .l_grid_container > .l_grid_cell-lg-12 {
+    width: 100%; } }
+.l_grid_container {
+  width: 100%; }
+  .l_grid_container > [class*=l_grid_cell] {
+    float: left; }
+  .l_grid_container > [class*=l_grid_cell]:last-child {
+    float: right; }
+  .l_grid_container > .l_grid_cell-last {
+    float: left; }
+
+.l_topBar {
+  position: relative;
+  top: 0;
+  width: 100%; }
+  .l_topBar.is-pinned {
+    position: fixed; }
+
+.l_bottomBar {
+  border: 1px solid;
+  padding: 18px 30px 0;
+  width: 100%; }
+
+.l_colourblock {
+  width: 100%; }
+
+.l_relative {
+  position: relative; }
+
+.l_absoluteCenter {
+  margin: auto;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0; }
+
+.article .m_image {
+  float: left;
+  width: 50%; }
+.article .m_text {
+  float: right;
+  width: 50%;
+  color: #666; }
+  .article .m_text a:link, .article .m_text a:visited, .article .m_text a:hover, .article .m_text a:active {
+    color: #555; }
