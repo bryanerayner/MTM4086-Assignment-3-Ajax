@@ -1,0 +1,32 @@
+@import "../bower_components/SassySMACSS/modules/layout.scss";
+
+@import "mixins/web-fonts.scss";
+
+@include web-font((Open Sans));
+
+ul, li{
+	padding:0;
+	margin:0;
+}
+li{
+	list-style:none;
+}
+
+
+
+body
+{
+	font-family:"Open Sans";
+}
+
+@import "modules/product.scss";
+@import "modules/title.scss";
+@import "modules/loading.scss";
+
+@import "modules/pager.scss";
+
+
+.l_constrained
+{
+	max-width:600px;
+}

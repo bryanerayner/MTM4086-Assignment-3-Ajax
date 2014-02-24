@@ -1,0 +1,37 @@
+.pager
+{
+	width:100%;
+
+	> .m_page
+	{
+		float:left;
+		color:black;
+
+		text-align: center;
+		text-decoration: none; 
+		padding-top:.5em;
+		padding-bottom:.5em;
+
+		&.is-current
+		{
+			color:white;
+			background-color:black;
+		}
+	}
+}
+
+
+
+@for $i from 1 through 3
+{
+
+	.pager.pager-#{$i}
+	{
+		> .m_page
+		{
+			width: percentage(1 / $i);
+		}
+	}
+}
+
+

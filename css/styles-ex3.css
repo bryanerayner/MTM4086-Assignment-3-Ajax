@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Open|Sans);
 .l_constrained:before, .l_title:before, .l_colourblock:before,
 .l_constrained:after,
 .l_title:after,
@@ -124,7 +125,7 @@
 @media (max-width: 1024px) {
   .l_grid_container > .l_grid_cell-lg-11 {
     width: 91.66667%; } }
-.l_grid_container > .l_grid_cell-sm-12 {
+.l_grid_container > .l_grid_cell-sm-12, .l_grid_container > .product {
   width: 100%; }
 
 @media (max-width: 720px) {
@@ -168,14 +169,57 @@
   right: 0;
   bottom: 0; }
 
-.article .m_image {
-  float: left;
-  width: 50%; }
-.article .m_text {
-  float: right;
-  width: 50%;
-  color: #666; }
-  .article .m_text a:link, .article .m_text a:visited, .article .m_text a:hover, .article .m_text a:active {
-    color: #555; }
+/*
+ * This is a fairly big mixin.
+ * The reason for this is that at the time of writing (09/01/2013),
+ * Sass does not include functions for substring or find/replace in string.
+ * Chris Eppstein sent a Pull Request to Sass with the str-extract (substring) function back in June,
+ * but it still has not been merged, due to lack of minor comments.
+ * That was five months ago.
+ */
+ul, li {
+  padding: 0;
+  margin: 0; }
 
-/*# sourceMappingURL=styles.css.map */
+li {
+  list-style: none; }
+
+body {
+  font-family: "Open Sans"; }
+
+.product {
+  float: left;
+  min-height: 90px; }
+
+.title {
+  font-size: 24px; }
+
+.is-loading {
+  background-image: url("http://preloaders.net/preloaders/287/Filling%20broken%20ring.gif"); }
+
+.pager {
+  width: 100%; }
+  .pager > .m_page {
+    float: left;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    padding-top: .5em;
+    padding-bottom: .5em; }
+    .pager > .m_page.is-current {
+      color: white;
+      background-color: black; }
+
+.pager.pager-1 > .m_page {
+  width: 100%; }
+
+.pager.pager-2 > .m_page {
+  width: 50%; }
+
+.pager.pager-3 > .m_page {
+  width: 33.33333%; }
+
+.l_constrained {
+  max-width: 600px; }
+
+/*# sourceMappingURL=styles-ex3.css.map */

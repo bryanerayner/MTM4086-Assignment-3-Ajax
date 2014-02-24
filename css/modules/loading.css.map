@@ -1,0 +1,6 @@
+{
+"version": 3,
+"mappings": "AAAA,WACA;EACC,gBAAgB,EAAC,uEAAuE",
+"sources": ["../../scss/modules/loading.scss"],
+"file": "loading.css"
+}

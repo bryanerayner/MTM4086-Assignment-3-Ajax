@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+    <title>JSON from an API</title>
+    <link rel = "stylesheet" href = "css/styles-ex2.css">
+  </head>
+  <body>
+
+    <h1>All my beautiful programmers</h1>
+    <form action="">
+      <input type="text" id = "githubTagInput" value = "bryanerayner">
+      <button type="button" onclick="loadPeeps()">Load this programmer</button>
+    </form>
+    
+    <div class = "l_grid_container" id="programmer-feed">
+      <div id="loading"></div>
+    </div>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="js/jquery-dateFormat.min.js"></script>
+  <script src="js/json-ajax-github.js"></script>
+  </body>
+</html>

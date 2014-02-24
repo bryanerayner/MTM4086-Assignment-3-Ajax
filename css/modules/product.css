@@ -1,0 +1,35 @@
+/*
+Sass::SyntaxError: ".product" failed to @extend ".l_grid_cell-sm-12".
+The selector ".l_grid_cell-sm-12" was not found.
+Use "@extend .l_grid_cell-sm-12 !optional" if the extend should be able to fail.
+
+
+Backtrace:
+scss/modules/product.scss:3
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.2/lib/sass/tree/visitors/extend.rb:61:in `block in check_extends_fired!'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.2/lib/sass/util/subset_map.rb:106:in `block in each_value'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.2/lib/sass/util/subset_map.rb:106:in `each'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.2/lib/sass/util/subset_map.rb:106:in `each_value'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.2/lib/sass/tree/visitors/extend.rb:50:in `check_extends_fired!'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.2/lib/sass/tree/visitors/extend.rb:16:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.2/lib/sass/tree/root_node.rb:39:in `css_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.2/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.2/lib/sass/engine.rb:364:in `_render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.2/lib/sass/engine.rb:292:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.2/lib/sass/plugin/compiler.rb:345:in `update_stylesheet'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.2/lib/sass/plugin/compiler.rb:191:in `block in update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.2/lib/sass/plugin/compiler.rb:188:in `each'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.2/lib/sass/plugin/compiler.rb:188:in `update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.2/lib/sass/plugin/compiler.rb:276:in `block in watch'
+/Library/Ruby/Gems/2.0.0/gems/listen-1.1.6/lib/listen/listener.rb:236:in `call'
+/Library/Ruby/Gems/2.0.0/gems/listen-1.1.6/lib/listen/listener.rb:236:in `on_change'
+/Library/Ruby/Gems/2.0.0/gems/listen-1.1.6/lib/listen/listener.rb:271:in `block in initialize_adapter'
+/Library/Ruby/Gems/2.0.0/gems/listen-1.1.6/lib/listen/adapter.rb:244:in `call'
+/Library/Ruby/Gems/2.0.0/gems/listen-1.1.6/lib/listen/adapter.rb:244:in `report_changes'
+/Library/Ruby/Gems/2.0.0/gems/listen-1.1.6/lib/listen/adapter.rb:313:in `poll_changed_directories'
+/Library/Ruby/Gems/2.0.0/gems/listen-1.1.6/lib/listen/adapter.rb:289:in `block in start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Sass::SyntaxError: \".product\" failed to @extend \".l_grid_cell-sm-12\".\A The selector \".l_grid_cell-sm-12\" was not found.\A Use \"@extend .l_grid_cell-sm-12 !optional\" if the extend should be able to fail.\A "; }

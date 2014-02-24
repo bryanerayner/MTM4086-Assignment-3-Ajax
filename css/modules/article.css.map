@@ -1,0 +1,6 @@
+{
+"version": 3,
+"mappings": "AAKC,iBACA;EACE,KAAK,EAAC,IAAI;EACV,KAAK,EAAC,GAAG;AAGX,gBACA;EACC,KAAK,EAAC,KAAK;EACX,KAAK,EAAE,GAAG;EACV,KAAK,EAAE,IAAI;EAEX,wGACA;IACA,KAAK,EAAC,IAAI",
+"sources": ["../../scss/modules/article.scss"],
+"file": "article.css"
+}

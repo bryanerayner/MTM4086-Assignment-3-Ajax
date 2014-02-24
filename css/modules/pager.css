@@ -1,0 +1,23 @@
+.pager {
+  width: 100%; }
+  .pager > .m_page {
+    float: left;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    padding-top: .5em;
+    padding-bottom: .5em; }
+    .pager > .m_page.is-current {
+      color: white;
+      background-color: black; }
+
+.pager.pager-1 > .m_page {
+  width: 100%; }
+
+.pager.pager-2 > .m_page {
+  width: 50%; }
+
+.pager.pager-3 > .m_page {
+  width: 33.33333%; }
+
+/*# sourceMappingURL=pager.css.map */
